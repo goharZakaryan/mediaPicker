@@ -51,11 +51,8 @@ public class MediaGridAdapter extends BaseAdapter {
         ImageView imageView = convertView.findViewById(R.id.imageView);
 
 
-        if (position == 0) {
-
-        } else {
             Glide.with(context).load(mediaList.get(position)).into(imageView);
-        }
+
 
         return convertView;
     }
