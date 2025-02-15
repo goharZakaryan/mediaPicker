@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
   >
+
 
     <!-- Main Vertical Container -->
     <LinearLayout
@@ -41,12 +46,40 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/postTime"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2 hours ago"
-                    android:textSize="12sp" />
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ssmallhour"
+                    app:tint="@color/gray"
+                    android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/postTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 hours ago"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
             </LinearLayout>
 
             <!-- Menu Button -->
@@ -54,7 +87,7 @@
                 android:id="@+id/menuButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/dots"
+                android:src="@drawable/dotss"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="12dp" />
         </LinearLayout>
@@ -100,22 +133,22 @@
             <!-- Comment Button (Center) -->
             <ImageButton
                 android:id="@+id/commentButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_weight="1"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="12dp"
-                android:src="@drawable/comment" />
+                android:src="@drawable/comto" />
 
             <!-- Share Button (Right) -->
             <ImageButton
                 android:id="@+id/shareButton"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_weight="1"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="12dp"
-                android:src="@drawable/forward" />
+                android:src="@drawable/sendo" />
         </LinearLayout>
 
     </LinearLayout>
