@@ -1,5 +1,8 @@
 package com.media.picker;
 
+import android.annotation.SuppressLint;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +20,18 @@ import com.media.picker.retrofit.ApiInterface;
 import java.util.ArrayList;
 import java.util.List;
 
+import pl.droidsonroids.gif.GifImageView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class ProfileFragment extends Fragment {
+
+    //sounds
+    private SoundPool mSoundpool;
+    private int mFeedHeart;
+
 
     private RecyclerView recyclerView;
     private ProfileAdapter profileAdapter;
@@ -38,6 +48,11 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+
+
+
+      // GifImageView feedheart = rootView.findViewById(R.id.feedheart);
+
         recyclerView = view.findViewById(R.id.recycler_view);
         progressBar = view.findViewById(R.id.progress_bar);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -49,6 +64,7 @@ public class ProfileFragment extends Fragment {
 
         return view;
     }
+
 
     private void fetchProfiles() {
         ApiInterface apiService = ApiClient.getRetrofitInstance(getContext())

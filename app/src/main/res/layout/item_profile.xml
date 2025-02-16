@@ -92,15 +92,114 @@
                 android:padding="12dp" />
         </LinearLayout>
 
-        <!-- Post Image -->
-        <!-- Post Image Carousel -->
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/postImageViewPager"
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:clipToPadding="false"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+
+            <!-- Post Image -->
+            <!-- Post Image Carousel -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/postImageViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:clipToPadding="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:layout_gravity="end"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="163dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape"
+                android:backgroundTint="@color/gro"
+                android:padding="8dp">
+
+
+
+                <!-- Like Button (Left) -->
+
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/feedheart"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/dfeedheart"
+                    android:onClick="onGifClick"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical">
+                </TextView>
+
+
+                <!-- Comment Button (Center) -->
+                <ImageButton
+                    android:id="@+id/commentButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="12dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/avcomt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical">
+                </TextView>
+
+
+                <!-- Share Button (Right) -->
+                <ImageButton
+                    android:id="@+id/shareButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="12dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/avsend" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical">
+                </TextView>
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/imageIndicator"
@@ -113,43 +212,7 @@
             app:tabSelectedTextColor="@android:color/black" />
 
 
-        <!-- Action Buttons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp">
 
-            <!-- Like Button (Left) -->
-            <ImageButton
-                android:id="@+id/likeButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:padding="12dp"
-                android:src="@drawable/heart" />
-
-            <!-- Comment Button (Center) -->
-            <ImageButton
-                android:id="@+id/commentButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:padding="12dp"
-                android:src="@drawable/comto" />
-
-            <!-- Share Button (Right) -->
-            <ImageButton
-                android:id="@+id/shareButton"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_weight="1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:padding="12dp"
-                android:src="@drawable/sendo" />
-        </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

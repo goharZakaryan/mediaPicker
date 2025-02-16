@@ -1,11 +1,15 @@
 package com.media.picker;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import pl.droidsonroids.gif.GifImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,6 +34,9 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_profile, parent, false);
+
+        GifImageView feedheart = view.findViewById(R.id.feedheart);
+
         return new ViewHolder(view);
     }
 
@@ -37,6 +44,8 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Profile profile = profileList.get(position);
         holder.nameTextView.setText(profile.getName());
+
+
 
         // Load profile image
         Glide.with(context)

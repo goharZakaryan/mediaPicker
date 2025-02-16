@@ -13,7 +13,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String  baseUrl = "https://455a-217-113-31-229.ngrok-free.app/";
+    private static final String  baseUrl = "https://9d7d-46-162-209-69.ngrok-free.app/";
     private static Retrofit retrofit = null;
     private static final Gson gson = new GsonBuilder()
             .setLenient()
